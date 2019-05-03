@@ -5,6 +5,7 @@
   var Defaults = $.fn.select2.amd.require('select2/defaults');
   var Placeholder = $.fn.select2.amd.require('select2/selection/placeholder');
   var AllowClear = $.fn.select2.amd.require('select2/selection/allowClear');
+  var SelectionSearch = $.fn.select2.amd.require('select2/selection/search');
   var Utils = $.fn.select2.amd.require('select2/utils');
 
   // parent method - apply
@@ -19,6 +20,10 @@
           Placeholder
         );
       }
+      options.selectionAdapter = Utils.Decorate(
+        options.selectionAdapter,
+        SelectionSearch
+      );
       if (options.allowClear) {
         options.selectionAdapter = Utils.Decorate(
           options.selectionAdapter,

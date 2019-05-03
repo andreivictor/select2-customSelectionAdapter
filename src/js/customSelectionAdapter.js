@@ -2,10 +2,9 @@ $.fn.select2.amd.define('select2/selection/customSelectionAdapter',
   [
     'jquery',
     'select2/selection/base',
-    'select2/selection/search',
     'select2/selection/eventRelay',
     'select2/utils',
-  ], function ($, BaseSelection, SelectionSearch, EventRelay, Utils) {
+  ], function ($, BaseSelection, EventRelay, Utils) {
 
     function CustomSelection ($element, options) {
       CustomSelection.__super__.constructor.apply(this, arguments);
@@ -144,9 +143,6 @@ $.fn.select2.amd.define('select2/selection/customSelectionAdapter',
     };
 
     // Decorate after the adapter is built
-    return Utils.Decorate(
-      Utils.Decorate(CustomSelection, EventRelay),
-      SelectionSearch
-    );
+    return Utils.Decorate(CustomSelection, EventRelay);
   }
 );

@@ -8,10 +8,9 @@ $.fn.select2.amd.define('select2/selection/customSelectionAdapter',
   [
     'jquery',
     'select2/selection/base',
-    'select2/selection/search',
     'select2/selection/eventRelay',
     'select2/utils',
-  ], function ($, BaseSelection, SelectionSearch, EventRelay, Utils) {
+  ], function ($, BaseSelection, EventRelay, Utils) {
 
     function CustomSelection ($element, options) {
       CustomSelection.__super__.constructor.apply(this, arguments);
@@ -150,10 +149,7 @@ $.fn.select2.amd.define('select2/selection/customSelectionAdapter',
     };
 
     // Decorate after the adapter is built
-    return Utils.Decorate(
-      Utils.Decorate(CustomSelection, EventRelay),
-      SelectionSearch
-    );
+    return Utils.Decorate(CustomSelection, EventRelay);
   }
 );
 
@@ -164,6 +160,7 @@ $.fn.select2.amd.define('select2/selection/customSelectionAdapter',
   var Defaults = $.fn.select2.amd.require('select2/defaults');
   var Placeholder = $.fn.select2.amd.require('select2/selection/placeholder');
   var AllowClear = $.fn.select2.amd.require('select2/selection/allowClear');
+  var SelectionSearch = $.fn.select2.amd.require('select2/selection/search');
   var Utils = $.fn.select2.amd.require('select2/utils');
 
   // parent method - apply
@@ -178,6 +175,10 @@ $.fn.select2.amd.define('select2/selection/customSelectionAdapter',
           Placeholder
         );
       }
+      options.selectionAdapter = Utils.Decorate(
+        options.selectionAdapter,
+        SelectionSearch
+      );
       if (options.allowClear) {
         options.selectionAdapter = Utils.Decorate(
           options.selectionAdapter,
