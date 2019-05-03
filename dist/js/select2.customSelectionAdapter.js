@@ -1,6 +1,6 @@
 /*!
  * select2-customselectionadapter v1.0.0 - An implementation of a custom selection adapter for the Select2 plugin (multiple mode). Displays the selected tags into a separate section, leaving the search box empty.
- * Copyright (c) 2019 Andrei Victor Bulearca - https://github.com/andreivictor/select2-customselectionadapter#readme
+ * Copyright (c) 2019 Andrei Victor Bulearca - https://github.com/andreivictor/select2-customSelectionAdapter#readme
  * License: MIT
  */
 

@@ -55,17 +55,24 @@ module.exports = function(grunt) {
                 }
             }
         },
+        copy: {
+            main: {
+                files: [
+                    {expand: true, src: 'dist/**', dest: 'docs/'},
+                ],
+            },
+        },
         watch: {
             options : {
                 atBegin : true
             },
             js: {
                 files: 'src/js/*.js',
-                tasks: ['concat']
+                tasks: ['concat', 'copy']
             },
             scss: {
                 files: 'src/scss/**/*.scss',
-                tasks: ['sass:dev']
+                tasks: ['sass:dev', 'copy']
             }
         }
     });
@@ -74,7 +81,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
-    grunt.registerTask('build:dev', ['concat', 'sass:dev']);
-    grunt.registerTask('build:prod', ['concat', 'uglify', 'sass:prod']);
+    grunt.registerTask('build:dev', ['concat', 'sass:dev', 'copy']);
+    grunt.registerTask('build:prod', ['concat', 'uglify', 'sass:prod', 'copy']);
 };
