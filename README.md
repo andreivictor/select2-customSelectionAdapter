@@ -1,11 +1,11 @@
 # select2-customSelectionAdapter
-An implementation of a custom selection adapter for the Select2 plugin (multiple mode). Displays the selected tags into a separate section, leaving the search box empty.
+An implementation of a custom selection adapter for the Select2 plugin (v4) - multiple mode. Displays the selected tags into a separate section, leaving the search box empty.
 
 ![img](https://imgur.com/trAkGul.png)
 
 ## Demo ##
 
-Demo available on: https://andreivictor.github.io/select2-customSelectionAdapter/. 
+https://andreivictor.github.io/select2-customSelectionAdapter/. 
 
 
 ## Usage ##
@@ -41,3 +41,9 @@ $("select").select2({
     selectionContainer: $('.foo')
 });
 ```
+
+## Select2 compatibility ##
+- Select2 4+
+
+## Copyright and license ##
+The license is available within the repository in the [LICENSE](LICENSE) file.
