@@ -256,6 +256,54 @@ $(document).ready(function() {
     allowClear: true,
     selectionAdapter: CustomSelectionAdapter,
     selectionContainer: $('.foo')
+  })
+    .on("select2:open", function (e) { console.log("select2:open", e); })
+    .on("select2:close", function (e) { console.log("select2:close", e); })
+    .on("select2:select", function (e) { console.log("select2:select", e); })
+    .on("select2:unselect", function (e) { console.log("select2:unselect", e); });
+
+  $('.js-example-custom-multiple-tags').select2({
+    placeholder: 'Select a color...',
+    tags: true,
+    selectionAdapter: CustomSelectionAdapter
   });
+
+  $('.js-example-custom-multiple-ajax').select2({
+    ajax: {
+      url: 'https://api.github.com/search/repositories',
+      dataType: 'json',
+      delay: 250,
+      data: function (params) {
+        return {
+          q: params.term, // search term
+          page: params.page
+        };
+      },
+      processResults: function (data, params) {
+        // parse the results into the format expected by Select2
+        // since we are using custom formatting functions we do not need to
+        // alter the remote JSON data, except to indicate that infinite
+        // scrolling can be used
+        params.page = params.page || 1;
+
+        return {
+          results: data.items,
+          pagination: {
+            more: (params.page * 30) < data.total_count
+          }
+        };
+      },
+      cache: true
+    },
+    placeholder: 'Search for a repository',
+    minimumInputLength: 1,
+    templateResult: formatRepo,
+    templateSelection: formatRepo,
+    selectionAdapter: CustomSelectionAdapter
+  });
+
+  function formatRepo (repo) {
+    return repo.full_name || repo.text;
+  }
 
 });

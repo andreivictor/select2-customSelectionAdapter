@@ -7,10 +7,9 @@
     <title>Select2 - Custom Selection Adapter</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7-rc.0/css/select2.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.css" />
     <link rel="stylesheet" href="dist/css/select2.customSelectionAdapter.css" />
     <link rel="stylesheet" href="css/style.css" />
-
 </head>
 
 <body>
@@ -36,9 +35,23 @@
 
     <div class="foo"></div>
 
+    <div class="select2-example">
+        <label>Select 2 with Custom Selection Adapter + Tags</label>
+        <select class="js-example-custom-multiple-tags" multiple="multiple">
+            <option>orange</option>
+            <option>white</option>
+            <option>purple</option>
+        </select>
+    </div>
+
+    <div class="select2-example select2-example--last">
+        <label>Select 2 with Custom Selection Adapter + Ajax (remote data)</label>
+        <select class="js-example-custom-multiple-ajax" multiple="multiple"></select>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7-rc.0/js/select2.js"></script>
-    <script src="dist/js/select2.customSelectionAdapter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.js"></script>
+    <script src="dist/js/select2.customSelectionAdapter.js"></script>
     <script src="js/scripts.js"></script>
 </body>
 </html>
