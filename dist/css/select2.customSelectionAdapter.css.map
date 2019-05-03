@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "select2.customSelectionAdapter.css",
+	"sources": [
+		"../../src/scss/core.scss",
+		"../../src/scss/_multiple-custom.scss",
+		"../../src/scss/theme/default/layout.scss",
+		"../../src/scss/theme/classic/layout.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,ACCE,kBDDgB,CCAlB,oCAAoC,CAClC,uBAAuB,CAAC;EACtB,KAAK,EAAE,iBAAiB;CAIzB;;ADNH,ACGI,kBDHc,CCAlB,oCAAoC,CAClC,uBAAuB,CAErB,sBAAsB,CAAC;EACrB,KAAK,EAAE,eAAe;CACvB;;ADDL,AAAA,oCAAoC,CAAC;EACnC,OAAO,EAAE,MAAM;EACf,OAAO,EAAE,KAAK;CACf;;AEPD,AACE,2BADyB,CACzB,0BAA0B,CAAC;EACzB,gBAAgB,EAAE,WAAW;EAC7B,MAAM,EAAE,MAAM;EACd,aAAa,EAAE,CAAC;EAChB,MAAM,EAAE,OAAO;EACf,OAAO,EAAE,MAAM;CAChB;;ACPH,AACE,2BADyB,CACzB,0BAA0B,CAAC;EACzB,gBAAgB,EAAE,WAAW;EAC7B,MAAM,EAAE,MAAM;EACd,aAAa,EAAE,CAAC;EAChB,MAAM,EAAE,OAAO;EACf,OAAO,EAAE,MAAM;CAKhB;;AAXH,AAQI,2BARuB,CACzB,0BAA0B,AAOvB,MAAM,CAAC;EACN,MAAM,EAAE,MAAM;CACf"
+}

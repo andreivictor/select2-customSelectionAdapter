@@ -1,0 +1,261 @@
+var select2Data = [
+  {
+    "text": "Alaskan/Hawaiian Time Zone",
+    "children": [
+      {
+        id: "AK",
+        text: "Alaska"
+      },
+      {
+        id: "HI",
+        text: "Hawaii"
+      }
+    ],
+  },
+  {
+    "text": "Pacific Time Zone",
+    "children": [
+      {
+        id: "CA",
+        text: "California"
+      },
+      {
+        id: "NV",
+        text: "Nevada"
+      },
+      {
+        id: "OR",
+        text: "Oregon"
+      },
+      {
+        id: "WA",
+        text: "Washington"
+      }
+    ],
+  },
+  {
+    "text": "Mountain Time Zone",
+    "children": [
+      {
+        id: "AZ",
+        text: "Arizona"
+      },
+      {
+        id: "CO",
+        text: "Colorado"
+      },
+      {
+        id: "ID",
+        text: "Idaho"
+      },
+      {
+        id: "MT",
+        text: "Montana"
+      },
+      {
+        id: "NE",
+        text: "Nebraska"
+      },
+      {
+        id: "NM",
+        text: "New Mexico"
+      },
+      {
+        id: "ND",
+        text: "North Dakota"
+      },
+      {
+        id: "UT",
+        text: "Utah"
+      },
+      {
+        id: "WY",
+        text: "Wyoming"
+      }
+    ],
+  },
+  {
+    "text": "Central Time Zone",
+    "children": [
+      {
+        id: "AL",
+        text: "Alabama"
+      },
+      {
+        id: "AR",
+        text: "Arkansas"
+      },
+      {
+        id: "IL",
+        text: "Illinois"
+      },
+      {
+        id: "IA",
+        text: "Iowa"
+      },
+      {
+        id: "KS",
+        text: "Kansas"
+      },
+      {
+        id: "KY",
+        text: "Kentucky"
+      },
+      {
+        id: "LA",
+        text: "Louisiana"
+      },
+      {
+        id: "MN",
+        text: "Minnesota"
+      },
+      {
+        id: "MS",
+        text: "Mississippi"
+      },
+      {
+        id: "MO",
+        text: "Missouri"
+      },
+      {
+        id: "OK",
+        text: "Oklahoma"
+      },
+      {
+        id: "SD",
+        text: "South Dakota"
+      },
+      {
+        id: "TX",
+        text: "Texas"
+      },
+      {
+        id: "TN",
+        text: "Tennessee"
+      },
+      {
+        id: "WI",
+        text: "Wisconsin"
+      },
+    ],
+  },
+  {
+    "text": "Eastern Time Zone",
+    "children": [
+      {
+        id: "CT",
+        text: "Connecticut"
+      },
+      {
+        id: "DE",
+        text: "Delaware"
+      },
+      {
+        id: "FL",
+        text: "Florida"
+      },
+      {
+        id: "GA",
+        text: "Georgia"
+      },
+      {
+        id: "IN",
+        text: "Indiana"
+      },
+      {
+        id: "ME",
+        text: "Maine"
+      },
+      {
+        id: "MD",
+        text: "Maryland"
+      },
+      {
+        id: "MA",
+        text: "Massachusetts"
+      },
+      {
+        id: "MI",
+        text: "Michigan"
+      },
+      {
+        id: "NH",
+        text: "New Hampshire"
+      },
+      {
+        id: "NJ",
+        text: "New Jersey"
+      },
+      {
+        id: "NY",
+        text: "New York"
+      },
+      {
+        id: "NC",
+        text: "North Carolina"
+      },
+      {
+        id: "OH",
+        text: "Ohio"
+      },
+      {
+        id: "PA",
+        text: "Pennsylvania"
+      },
+      {
+        id: "RI",
+        text: "Rhode Island"
+      },
+      {
+        id: "SC",
+        text: "South Carolina"
+      },
+      {
+        id: "VT",
+        text: "Vermont"
+      },
+      {
+        id: "VA",
+        text: "Virginia"
+      },
+      {
+        id: "WV",
+        text: "West Virginia"
+      },
+    ],
+  }
+];
+
+
+$(document).ready(function() {
+
+  var CustomSelectionAdapter = $.fn.select2.amd.require("select2/selection/customSelectionAdapter");
+
+  $('.js-example-basic-multiple').select2({
+    data: select2Data,
+    placeholder: 'Select a state'
+  });
+
+  $('.js-example-custom-multiple').select2({
+    data: select2Data,
+    placeholder: 'Select a state',
+    allowClear: false,
+    selectionAdapter: CustomSelectionAdapter
+  });
+
+  $('.js-example-custom-multiple-clear').select2({
+    data: select2Data,
+    placeholder: 'Select a state',
+    allowClear: true,
+    selectionAdapter: CustomSelectionAdapter
+  });
+
+  $('.js-example-custom-multiple-custom-container').select2({
+    data: select2Data,
+    placeholder: 'Select a state',
+    allowClear: true,
+    selectionAdapter: CustomSelectionAdapter,
+    selectionContainer: $('.foo')
+  });
+
+});

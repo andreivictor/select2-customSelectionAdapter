@@ -1,0 +1,29 @@
+select {
+    width: 100%;
+    max-width: 400px;
+}
+
+html, body {
+    height: 100%;
+    min-height: 100%;
+}
+
+.select2-example {
+    padding: 10px;
+}
+
+.select2-example label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.select2-example + .select2-example {
+    margin-top: 20px;
+}
+
+.foo {
+    margin-left: 10px;
+    margin-top: 10px;
+    border: 1px solid purple;
+}

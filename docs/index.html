@@ -1,0 +1,44 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Select2 - Custom Selection Adapter</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <link rel="stylesheet" href="../node_modules/select2/dist/css/select2.css" />
+    <link rel="stylesheet" href="../dist/css/select2.customSelectionAdapter.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+</head>
+
+<body>
+    <div class="select2-example">
+        <label>Default Select 2</label>
+        <select class="js-example-basic-multiple" name="states1[]" multiple></select>
+    </div>
+
+    <div class="select2-example">
+        <label>Select 2 with Custom Selection Adapter</label>
+        <select class="js-example-custom-multiple" name="states2[]" multiple></select>
+    </div>
+
+    <div class="select2-example">
+        <label>Select 2 with Custom Selection Adapter + Allow Clear Option</label>
+        <select class="js-example-custom-multiple-clear" name="states3[]" multiple></select>
+    </div>
+
+    <div class="select2-example">
+        <label>Select 2 with Custom Selection Adapter + Custom Container Option</label>
+        <select class="js-example-custom-multiple-custom-container" name="states4[]" multiple></select>
+    </div>
+
+    <div class="foo"></div>
+
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/select2/dist/js/select2.full.js"></script>
+    <script src="../dist/js/select2.customSelectionAdapter.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
