@@ -28,6 +28,11 @@ Include the script after Select2 main javascript file:
 <script src="select2.customSelectionAdapter.min.js"></script>
 ```
 
+Include the css file:
+```html
+<link rel="stylesheet" href="select2.customSelectionAdapter.css" />
+```
+
 ## `selectionContainer` Option ##
 By default, the tags are added immediately after the `select2` container.
 You can use the `selectionContainer` option to add them somewhere else in the page.
