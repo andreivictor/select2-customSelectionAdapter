@@ -121,8 +121,6 @@ $.fn.select2.amd.define('select2/selection/customSelectionAdapter',
       
       this.$selectionTagsContainer.removeClass('select2-selection--empty');
 
-      this.$selectionTags.show();
-
       var $selections = [];
 
       for (var d = 0; d < data.length; d++) {
