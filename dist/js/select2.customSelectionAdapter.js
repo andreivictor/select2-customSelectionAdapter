@@ -40,6 +40,8 @@ $.fn.select2.amd.define('select2/selection/customSelectionAdapter',
 
       this.$selectionTagsContainer.html(this.$selectionTags);
 
+      this.$selectionTagsContainer.addClass('select2-container--empty');
+
       if (this.options.get('selectionContainer')) {
         this.$selectionTagsContainer.appendTo(this.options.get('selectionContainer'));
       } else {
@@ -91,6 +93,7 @@ $.fn.select2.amd.define('select2/selection/customSelectionAdapter',
     };
 
     CustomSelection.prototype.clear = function () {
+      this.$selectionTagsContainer.addClass('select2-container--empty');
       // we need this line to remove the existing .select2-selection__clear button
       this.$selection.find('.select2-selection__rendered').empty();
       this.$selectionTags.find('.select2-selection__rendered').empty();
@@ -121,6 +124,8 @@ $.fn.select2.amd.define('select2/selection/customSelectionAdapter',
       if (data.length === 0) {
         return;
       }
+      
+      this.$selectionTagsContainer.removeClass('select2-container--empty');
 
       var $selections = [];
 

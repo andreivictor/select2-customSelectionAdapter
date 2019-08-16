@@ -31,3 +31,12 @@ html, body {
     margin-top: 10px;
     border: 1px solid purple;
 }
+
+.js-example-custom-multiple-empty ~ .select2-container--custom-selection {
+    border: 1px solid #ff5400;
+    padding: 5px;
+}
+
+.js-example-custom-multiple-empty ~ .select2-container--empty {
+    display: none;
+}

@@ -306,4 +306,10 @@ $(document).ready(function() {
     return repo.full_name || repo.text;
   }
 
+  $('.js-example-custom-multiple-empty').select2({
+    data: select2Data,
+    placeholder: 'Select a state',
+    selectionAdapter: CustomSelectionAdapter
+  });
+
 });
