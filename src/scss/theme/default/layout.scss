@@ -6,4 +6,9 @@
     cursor: default;
     outline: 0 none;
   }
+  &.select2-container--disabled {
+    .select2-selection--custom {
+      background-color: transparent;
+    }
+  }
 }
