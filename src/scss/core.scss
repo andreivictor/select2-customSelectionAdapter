@@ -1,0 +1,11 @@
+.select2-container {
+  @import "multiple-custom";
+}
+
+.select2-container--custom-selection {
+  outline: 0 none;
+  display: block;
+}
+
+@import "theme/default/layout";
+@import "theme/classic/layout";
