@@ -312,4 +312,20 @@ $(document).ready(function() {
     selectionAdapter: CustomSelectionAdapter
   });
 
+  $('.js-example-basic-multiple-disabled').select2({
+    data: select2Data,
+    placeholder: 'Select a state'
+  })
+  .val(["AK", "HI"])
+  .trigger("change");
+
+  $('.js-example-custom-multiple-disabled').select2({
+    data: select2Data,
+    placeholder: 'Select a state',
+    allowClear: false,
+    selectionAdapter: CustomSelectionAdapter
+  })
+  .val(["AK", "HI"])
+  .trigger("change");
+
 });
