@@ -139,7 +139,7 @@ $.fn.select2.amd.define('select2/selection/customSelectionAdapter',
 
       var $rendered = this.$selectionTags.find('.select2-selection__rendered');
 
-      Utils.appendMany($rendered, $selections);
+      $rendered.append($selections);
 
       // Re-append placeholder
       if (this.placeholder && this.placeholder.text) {
